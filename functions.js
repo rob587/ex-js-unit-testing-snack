@@ -8,4 +8,8 @@ function getInitials(name) {
   return initials;
 }
 
-module.exports = { getInitials };
+function createSlug(str) {
+  return str.toLowerCase();
+}
+
+module.exports = { getInitials, createSlug };
