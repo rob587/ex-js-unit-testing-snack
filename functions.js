@@ -12,4 +12,15 @@ function createSlug(str) {
   return str.toLowerCase();
 }
 
-module.exports = { getInitials, createSlug };
+function average(numbers) {
+  const sum = numbers.reduce((acc, num) => acc + num, 0);
+  const avg = sum / numbers.length;
+
+  return avg;
+}
+
+module.exports = {
+  getInitials,
+  createSlug,
+  average,
+};
