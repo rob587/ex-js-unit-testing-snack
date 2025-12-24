@@ -3,6 +3,7 @@ const {
   createSlug,
   average,
   createSlugh,
+  isPalindrome,
 } = require("./functions");
 
 describe("getInitials", () => {
@@ -26,5 +27,11 @@ describe("average", () => {
 describe("createSlugh", () => {
   test("La funzione createSlug sostituisce gli spazi con -.", () => {
     expect(createSlugh("Questo è un test")).toBe("questo-è-un-test");
+  });
+});
+
+describe("isPalindrome", () => {
+  test("La funzione isPalindrome verifica se una stringa è un palindromo", () => {
+    expect(isPalindrome("anna")).toBe(true);
   });
 });
