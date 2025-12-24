@@ -19,8 +19,13 @@ function average(numbers) {
   return avg;
 }
 
+function createSlugh(str) {
+  return str.toLowerCase().replaceAll(" ", "-");
+}
+
 module.exports = {
   getInitials,
   createSlug,
   average,
+  createSlugh,
 };
