@@ -4,6 +4,8 @@ const {
   average,
   createSlugh,
   isPalindrome,
+  findPostById,
+  posts,
 } = require("./functions");
 
 describe("getInitials", () => {
@@ -37,5 +39,15 @@ describe("createSlugh", () => {
 describe("isPalindrome", () => {
   test("La funzione isPalindrome verifica se una stringa è un palindromo", () => {
     expect(isPalindrome("anna")).toBe(true);
+  });
+});
+describe("findPostById", () => {
+  test("La funzione findPostById restituisce il post corretto dato l'array di post e l'id", () => {
+    const result = findPostById(posts, 2);
+    expect(result).toEqual({
+      id: 2,
+      title: "Secondo Post",
+      slug: "secondo-post",
+    });
   });
 });

@@ -33,10 +33,22 @@ function isPalindrome(str) {
   return str === reversed;
 }
 
+const posts = [
+  { id: 1, title: "Primo Post", slug: "primo-post" },
+  { id: 2, title: "Secondo Post", slug: "secondo-post" },
+  { id: 3, title: "Terzo Post", slug: "terzo-post" },
+];
+
+function findPostById(posts, id) {
+  return posts.find((post) => id === post.id);
+}
+
 module.exports = {
   getInitials,
   createSlug,
   average,
   createSlugh,
   isPalindrome,
+  findPostById,
+  posts,
 };
