@@ -16,6 +16,10 @@ describe("createSlug", () => {
   test("La funzione createSlug restituisce una stringa in lowercase", () => {
     expect(createSlug("HELLO WORLD")).toBe("hello world");
   });
+
+  test("La funzione createSlug restituisce una stringa in lowercase", () => {
+    expect(() => createSlug("")).toThrow();
+  });
 });
 
 describe("average", () => {

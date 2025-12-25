@@ -9,6 +9,10 @@ function getInitials(name) {
 }
 
 function createSlug(str) {
+  if (str === "") {
+    throw new Error("Il titolo non può essere vuoto");
+  }
+
   return str.toLowerCase();
 }
 
